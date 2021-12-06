@@ -1,4 +1,32 @@
+function showList() {
+    list.innerHTML = '';
+    for (let city of cities) {
+        list.innerHTML += '<li onclick="search.value= \'' + city + '\'; searchcity()" class="cities">' + city + '</li>'
+    }
+}
 
+// enable / disable search button
+function validate() {
+    if (search.value.trim().length) {
+        btnEl.classList.remove('disabled')
+        btnEl.classList.add('enabled')
+        return true
+    }
+    else {
+        btnEl.classList.remove('enabled')
+        btnEl.classList.add('disabled')
+        return false
+    }
+}
+
+function searchcity() {
+    error.innerHTML = ''
+    results.style.display = 'none'
+    if (btnEl.classList.contains('disabled')) {
+        search.focus()
+        return false
+    }
+    const searchval = search.value
 
 
 var apikey = "82ccbfcc5db7584829b51304b0040048"
