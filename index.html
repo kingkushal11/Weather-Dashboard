@@ -4,52 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link real="stylesheet" href="./assets/style.css"/>
-     <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>OpenWeatherMap API</title>
 </head>
+
 <body>
-    <header class="nav justify-content-center text-allign-center bg-primary bg-gradient text-white">
-        <h1 class="text-center ">Weather Dashboard</h1>
+
+    <header>
+        <h1>Weather Dashboard</h1>
     </header>
-    <main>
-        <div>
-            <h2>Search for a City:</h2>
+    <section>
+        <main>
+            <div>
+                <h2>Search for a City:</h2>
+            </div>
+            <input type="text" id="search" placeholder="Search" value="Search cities">
+            <div id="error"></div>
+            <button class="disabled" id="searchbtn">Search</button>
+
+            <hr />
+            <ul id="list">
+                <li class="cities"></li>
+                <li class="cities"></li>
+                <li class="cities"></li>
+                <li class="cities"></li>
+                <li class="cities"></li>
+                <li class="cities"></li>
+                <li class="cities"></li>
+                <li class="cities"></li>
+            </ul>
+        </main>
+        <div id="results">
+            <div id="current">
+                <h2></h2>
+                <div id="details"></div>
+            </div>
+            <div id="fiveDays">
+                <h2>5-Day Forecast:</h2>
+                <div id="cards"></div>
+            </div>
         </div>
-        <input type="text" id="search" placeholder="search Cities" value="Search Cities">
-        <div id="error"></div>
-        <button class="enabled" id="searchbtn">Search</button>
-
-        <hr />
-        <ul id="list">
-            <li class="cities"></li>
-            <li class="cities"></li>
-            <li class="cities"></li>
-            <li class="cities"></li>
-            <li class="cities"></li>
-            <li class="cities"></li>
-            <li class="cities"></li>
-            <li class="cities"></li>
-        </ul>
-    </main>
-    <div id="results">
-        <div id="current">
-            <h2></h2>
-            <div id="details"></div>
-        </div>
-        <div id="fiveDays">
-            <h2>5-Day Forecast:</h2>
-            <div id="cards"></div>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-
-
-
+    </section>
     <script src="./assets/script.js"></script>
 </body>
 </html>

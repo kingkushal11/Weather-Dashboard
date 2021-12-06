@@ -1,3 +1,6 @@
+
+
+
 var apikey = "82ccbfcc5db7584829b51304b0040048"
 var btnEl = $("#searchbtn");
 function searchcity() {
